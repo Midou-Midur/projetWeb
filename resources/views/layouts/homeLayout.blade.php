@@ -59,9 +59,9 @@
         @yield('contentUnderNavbar')
 
         <div style="border: 1px solid black">
-          <footer style="position: absolute; background-color: black; color: white; width: 100%">
+          <footer class="grid-container-footer">
             <p id="p_id" class="#p_id" style="color: red; text-align: center;" >
-              <a href="#">Conditions générales de vente</a>
+              <a href="{{route('pages.legal')}}">Conditions générales de vente</a>
                 -
               <a href="#"> Carte Campus </a>
                -

@@ -12,14 +12,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-#p_id
-{
-    color: black;
-}
-#p_id:hover
-{
-    color: rgb(92,136,218);
-}
+
 
 body {
     background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../../img/logo_bde.png) no-repeat center fixed;
@@ -86,12 +79,25 @@ p{
     background: none;
 }
 
+
+
+/* Page Apropos*/
+
+h2.neutre{
+    margin: 40px;
+}
+
+p.neutre{
+    font-family: "Roboto Thin", sans-serif;
+}
+
 div.grid-container-profile{
     position: center;
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
 }
+
 div.grid-container-profile > div.grid-item-profile > div > img {
     border-radius: 50%;
 }
@@ -176,6 +182,9 @@ div > label.btn{
     border-color: rgb(92,132,218);
 }
 
+
+/* CSS pour la page MANAGEMENT */
+
 div.managementcontainer{
     padding: 10px;
     margin-left: 10px;
@@ -187,10 +196,11 @@ div.managementcontainer{
 div.grid-container-manacontainer{
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 20px;
     grid-column-gap: 10px;
+    border-color: gray;
 }
-.grid-container-manacontainer > p{
+div.grid-container-manacontainer > p{
     border-left-style: solid;
     border-left-color:rgb(92,136,218);
     border-left-width: 5px;
@@ -203,6 +213,27 @@ div.grid-container-manacontainer{
 
 
 
+
+
+
+
+
+
+
+
+/* footer */
+
+div.containerfooter{
+    vertical-align: text-bottom;
+}
+
+footer.grid-container-footer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding-left: 5%;
+    background-color: black;
+    color: rgb(92,136,218);
+}
 
 
 
