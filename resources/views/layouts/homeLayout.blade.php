@@ -12,7 +12,8 @@
     <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
+      <link rel="stylesheet" href="../../fontawesome/css/styles.css">
+      <style>
       /* Make the image fully responsive */
       .carousel-inner img
       {
@@ -51,13 +52,13 @@
           <a href="#" class="list-group-item list-group-item-action bg-light">Boutique</a>
           <a href="#" class="list-group-item list-group-item-action bg-light">A propos</a>
           <a href="https://www.facebook.com/BDECESISTRASBOURG/">
-            <img src="../resources/img/facebook_brands.jpg" alt="facebook">
+            <img src="../../img/facebook_brands.jpg" alt="facebook">
           </a>
           <a href="https://discord.gg/YWHudc">
-            <img src="../resources/img/discord_brands.png" alt="discord">
+            <img src="../../img/discord_brands.png" alt="discord">
           </a>
           <a href="https://twitter.com/CesiStrasbourg">
-            <img src="../resources/img/twitter_brands.png" alt="twitter">
+            <img src="../../img/twitter_brands.png" alt="twitter">
           </a>
         </div>
       </div>
@@ -92,13 +93,13 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../resources/img/event1.jpg" alt="after" width="1100" height="500">
+                <img src="../../img/event1.jpg" alt="after" width="1100" height="500">
               </div>
               <div class="carousel-item">
-                <img src="../resources/img/event2.png" alt="exialan" width="1100" height="500">
+                <img src="../../img/event2.png" alt="exialan" width="1100" height="500">
               </div>
               <div class="carousel-item">
-                <img src="../resources/img/event3.jpg" alt="lanparty" width="1100" height="500">
+                <img src="../../img/event3.jpg" alt="lanparty" width="1100" height="500">
               </div>
             </div>
             <!-- Left and right controls -->
@@ -115,13 +116,13 @@
           <br>
           <div class="row">
             <div class="col -lg-9 -md-8 -sm-7">
-              <img src="../resources/img/event1.jpg" alt="after" style="width: 75%">
+              <img src="../../img/event1.jpg" alt="after" style="width: 75%">
             </div>
             <div class="col -lg-2 -md-2 -sm-3">
-              <img src="../resources/img/event3.jpg" alt="after" style="width: 75%">
+              <img src="../../img/event3.jpg" alt="after" style="width: 75%">
             </div>
             <div class="col -lg-1 -md-2 -sm-2">
-              <img src="../resources/img/event1.jpg" alt="after" style="width: 75%">
+              <img src="../../img/event1.jpg" alt="after" style="width: 75%">
             </div>
           </div>
           <br>
@@ -142,7 +143,7 @@
                -
               <a href="#">Crédits </a>
                -
-              <a href="#">  Contactez-nous</a>
+              <a href="#">Contactez-nous</a>
                -
               <a href="{{route('pages.legal')}}">  Mentions légales</a>
             </p>
@@ -150,22 +151,7 @@
           @yield('contentBeforeFooter')
         </div>
       </div>
-      <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#wrapper -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/vendor/jquery/jquery.min.js"></script>
-    <script src="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Menu Toggle Script -->
-    <script>
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-      });
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     @yield('homePage')
   </body>
 </html>

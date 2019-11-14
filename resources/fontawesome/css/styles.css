@@ -1,0 +1,231 @@
+
+/* Make the image fully responsive */
+.carousel-inner img
+{
+    width: 50%;
+    height: 50%;
+}
+.bdeback
+{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../../img/logo_bde.png) no-repeat;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+#p_id
+{
+    color: black;
+}
+#p_id:hover
+{
+    color: rgb(92,136,218);
+}
+
+body {
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../../img/logo_bde.png) no-repeat center fixed;
+    overflow-x: hidden;
+    opacity: inherit;
+    margin-left:10%;
+    margin-right: 10%;
+    position: center;
+}
+
+h1{
+    color: rgb(27,54,93);
+    font-style: oblique;
+}
+
+h2{
+    color: rgb(27,54,93);
+
+}
+h2.neutre{
+    text-align: center;
+}
+li{
+    color: rgb(27,54,93);
+    font-family: "Roboto Medium";
+}
+p{
+    border-left-style: solid;
+    border-left-color:rgb(92,136,218);
+    border-left-width: 5px;
+    padding-left: 10px;
+    font-family: "Roboto";
+    background-color: rgba(208,208,208,.9);
+}
+
+.Bodymap{
+    background: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../../img/logo_bde.png) no-repeat center fixed;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+}
+.grid-item h2{
+    text-align: center;
+}
+
+.grid-item p{
+    border-left-style: solid;
+    border-left-color:rgba(92,136,218,0.7);
+    border-left-width: 5px;
+    padding-left: 10px;
+    font-family: "Roboto", sans-serif;
+    background: none;
+}
+
+div.grid-container-profile{
+    position: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+div.grid-container-profile > div.grid-item-profile > div > img {
+    border-radius: 50%;
+}
+div.grid-container-profile{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+div.grid-item-profile{
+    background: none;
+    border: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+body .Bodymap img{
+position: center;
+}
+
+.carousel{
+    position: center;
+    width: 100%;
+}
+
+p.neutre{
+    border-left-style: none;
+    font-family: "Roboto";
+    background: none;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.mainboutique {
+    padding: 25px;
+}
+
+.menufilter{
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(92,132,218);
+    border-radius: 25px;
+}
+
+.contentMenu{
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+}
+
+.articlepart{
+    margin-left: 10px;
+    background: linear-gradient(rgba(138,141,143,.4), rgba(208,208,206,.5));
+    width: 75%;
+    height: 80%;
+    border-radius: 1%;
+}
+
+div.grid-container-article {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+div.grid-item-article{
+    background: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
