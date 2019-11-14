@@ -128,7 +128,7 @@ p.neutre{
     text-align: center;
 }
 
-.mainboutique {
+.mainevent, .mainboutique{
     padding: 25px;
 }
 
@@ -170,6 +170,34 @@ div.grid-item-article{
     border-radius: 10px;
 }
 
+div > label.btn{
+    text-align: center;
+    margin: auto;
+    border-color: rgb(92,132,218);
+}
+
+div.managementcontainer{
+    padding: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+
+div.grid-container-manacontainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-column-gap: 10px;
+}
+.grid-container-manacontainer > p{
+    border-left-style: solid;
+    border-left-color:rgb(92,136,218);
+    border-left-width: 5px;
+    padding-left: 10px;
+    font-family: "Roboto";
+    background: none;
+}
 
 
 

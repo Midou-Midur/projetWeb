@@ -26,30 +26,48 @@ use App\Http\Controller\legalController;
 
 /*
 Pour y accéder depuis le navigateur :
-http://localhost/ProjetWebA2/public/
+http://localhost/ProjetWebA2 - Copie/public/
 */
 Route::get('/', function () {
     return view('pages.home');
 })->name('pages.home');
+
 //login/out/signIn
+Route::get('/pages/login', 'LoginController@voirFormulaire')->name('pages.login');
+Route::post('/pages/login', 'LoginController@traitement');
+Route::get('/pages/logout', 'LoginController@logout')->name('pages.logout');
+
 
 //dev
-Route::get('/pages/aPropos', 'aProposController');
-Route::get('/pages/boutique', 'boutiqueController');
-Route::get('/pages/pastEvent', 'pastEventController');
-Route::get('/pages/currentEvent', 'currentEventController');
-Route::get('/pages/profil', 'profilController');
+Route::prefix('pages')->
+group(function(){
+    Route::get('aPropos', 'aProposController')->name('pages.aPropos');
+    Route::get('boutique', 'boutiqueController')->name('pages.boutique');
 
-////Management et respect des règles
-Route::get('/pages/cgv', 'cgvController');
-Route::get('/pages/contact', 'contactController');
-Route::get('/pages/credit', 'creditController');
-Route::get('/pages/profil', 'profilController');
-Route::get('/pages/legal', function(){
-	return View::make('pages.legal')->compact('pages.legal');
+    //Partie login
+    Route::get('account', 'UserController@accueil')->name('pages.account');
+
+    //Event
+    Route::get('pastEvent', 'pastEventController')->name('pages.pastEvent');
+    Route::get('currentEvent', 'currentEventController')->name('pages.currentEvent');
+    Route::get('addEvent', 'EventController@voirFormulaire')->name('pages.addEvent');
+    Route::post('addEvent', 'EventController@addEvent')->name('pages.addEvent');
+    Route::get('events/{id}', 'EventController@index')->name('pages.events');
+
+    //Management et respect des règles
+    Route::get('cgv', 'cgvController')->name('pages.cgv');
+    Route::get('contact', 'contactController')->name('pages.contact');
+    Route::get('credit', 'creditController')->name('pages.credit');
+    Route::get('profil', 'profilController')->name('pages.profil');
+});
+
+Route::get('pages/addArticle', 'ArticleController@voirFormulaire')->name('pages.addArticle');
+Route::post('pages/addArticle', 'ArticleController@create');
+
+
+Route::get('legal', function(){
+    return View::make('pages.legal')->compact('pages.legal');
 })->name('pages.legal');
 
-//test
-Route::post('/pages/testArticleForm', function(){
-	return View::make('pages.testArticleForm')->compact('pages.testArticleForm');
-})->name('pages.testArticleForm');
+Route::get('/pages/addUser', 'UserController@voirFormulaire')->name('pages.addUser');
+Route::post('/pages/addUser', 'UserController@addUser')->name('pages.addUser');
