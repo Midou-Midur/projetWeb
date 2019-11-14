@@ -44,7 +44,7 @@ p{
     border-left-color:rgb(92,136,218);
     border-left-width: 5px;
     padding-left: 10px;
-    font-family: "Roboto";
+
     background-color: rgba(208,208,208,.9);
 }
 
@@ -126,7 +126,6 @@ position: center;
 
 p.neutre{
     border-left-style: none;
-    font-family: "Roboto";
     background: none;
     padding-left: 15%;
     padding-right: 15%;
@@ -170,7 +169,6 @@ div.grid-container-article {
 div.grid-item-article{
     background: white;
     padding: 20px;
-    font-size: 30px;
     text-align: left;
     font-size: 15px;
     border-radius: 10px;
@@ -205,9 +203,44 @@ div.grid-container-manacontainer > p{
     border-left-color:rgb(92,136,218);
     border-left-width: 5px;
     padding-left: 10px;
-    font-family: "Roboto";
     background: none;
 }
+
+
+
+
+
+/* Commentaire */
+
+div.grid-container-img{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+div.grid-item-img{
+    background: none;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+div.grid-item-img > img{
+    border: black 10px solid
+}
+
+div.media.commContent{
+    border-style: solid;
+    border-color: #636b6f;
+    max-width: 800px;
+    background: silver;
+}
+
+div.commitem{
+    max-width: 500px;
+}
+
+
 
 
 
