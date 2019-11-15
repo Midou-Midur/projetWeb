@@ -243,7 +243,24 @@ div.commitem{
 
 
 
+/*Page Mon compte*/
 
+.grid-container-Myaccount {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item-Myaccount {
+    border: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+}
+
+h2#MyaccountTitle{
+text-align: center;
+}
 
 
 

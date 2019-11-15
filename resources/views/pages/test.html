@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            <div class="card bg-light" style="width: auto; font-size: 16px;">
+                <div class="card-header">Voici votre compte @auth <?php $user=Auth::user(); echo $user->email; ?> @endauth </div>
+                <div class="card-body">
+                    <form method="POST" action="mdpModif">
+                        @csrf
+                        <div class="form-group row">
+                            <label for="mdp" class="col-md-4 col-form-label text-md-right">Votre nouveau mot de passe</label>
+                            <div class="col-md-6">
+                                <input class="form" name="mdp_modif" type="password" placeholder="Nouveau mdp">
+                                @if($errors->has('mdp'))
+                                <span class="invalid-feedback" role="alert">
+											<strong>{{ $errors->first('mdp')}}</strong>
+										</span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="mdp_confirm" class="col-md-4 col-form-label text-md-right">Confirmation du nouveau mot de passe</label>
+                            <div class="col-md-6">
+                                <input class="form" name="mdp_modif_confirm" type="password" placeholder="Nouveau mdp">
+                                @if($errors->has('mdp_confirm'))
+                                <span class="invalid-feedback" role="alert">
+											<strong>{{ $errors->first('mdp_confirm')}}</strong>
+										</span>
+                                @endif
+                                <button type="submit" class="btn btn-warning">Modifier</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table id="events_table" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th width="">Nom de l'évènement</th>
+            <th width="">Description de l'evènement</th>
+            <th width="">Date de l'evènement</th>
+            <th width="">Prix de l'evènement</th>
+            <th width="">Actions</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<script>
+    $(document).ready(function(){
+        $.('#events_table').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax:{
+                url:"{{ route('pages.account') }}",
+            },
+            columns: [
+                data:'event_name',
+            name:'event_name',
+
+            data:,'event_desc',
+            name:,'event_desc',
+            orderable: false
+
+        data:'event_date',
+            name:'event_date',
+
+            data:'event_price',
+            name:'event_price',
+
+            data:'actions',
+            name:'actions',
+            orderable: false
+
+    ]
+    })
+    })
+
+</body>
+</html>
