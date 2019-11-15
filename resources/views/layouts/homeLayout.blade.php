@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="../pages/styles.css">
-
   </head>
   <body class="bdeback">
     <!-- TEMPLATE SIDE & NAVBAR :https://blackrockdigital.github.io/startbootstrap-simple-sidebar/-->
@@ -39,6 +38,7 @@
           </a>
         </div>
       </div>
+
       <!-- /#sidebar-wrapper -->
       <!-- Page Content -->
       <div id="page-content-wrapper">
@@ -48,7 +48,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Notifications <span class="sr-only">(current)</span></a>
+                <a id="myBtn" class="nav-link" href="#">Notification</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#">Organisation</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Profil</a></li>
@@ -56,24 +56,83 @@
             </ul>
           </div>
         </nav>
+
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <span class="close">&times; Quitter</span>
+
+                  </div>
+
+
+                  <div class="modal-body">
+                      <p>Joe Doe a signalé une image</p>
+                      <p>Joe Doe a poster une image</p>
+                  </div>
+              </div>
+
+          </div>
+
+
+
+
+
+
+
+
         @yield('contentUnderNavbar')
 
-        <div style="border: 1px solid black">
-          <footer class="grid-container-footer">
-            <p id="p_id" class="#p_id" style="color: red; text-align: center;" >
-              <a href="{{route('pages.legal')}}">Conditions générales de vente</a>
-                -
-              <a href="#"> Carte Campus </a>
-               -
-              <a href="#">Crédits </a>
-               -
-              <a href="#">Contactez-nous</a>
-               -
-              <a href="{{route('pages.legal')}}">  Mentions légales</a>
-            </p>
-          </footer>
-        </div>
-      </div>
+          <div class="containerfooter">
+              <footer class="grid-container-footer">
+                  <div id="footer" class="#grid-item-footer">
+                      <a href="{{route('pages.legal')}}">Conditions générales de vente</a>
+                  </div>
+                  <div id="footer1" class="#grid-item-footer">
+                      <a href="#"> Carte Campus </a>
+                  </div>
+                  <div id="footer2" class="#grid-item-footer">
+                      <a href="#">Crédits </a>
+                  </div>
+                  <div id="footer3" class="#grid-item-footer">
+                      <a href="#">Contactez-nous</a>
+                  </div>
+                  <div id="footer4" class="#grid-item-footer">
+                      <a href="{{route('pages.legal')}}">  Mentions légales</a>
+                  </div>
+              </footer>
+          </div>
     </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
   </body>
 </html>
