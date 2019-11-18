@@ -16,7 +16,7 @@ class LoginController extends Controller
     		'password' => ['required'],
     	]);
 
-    	$resultat = auth()->attempt([
+    	$resultat = auth()->attempt([  // vérifie si le contenu des inputs est identique à ce qui est inscrit dans la BDD
     		'email' => request('email'),
     		'password' => request('password'),
     	]);
