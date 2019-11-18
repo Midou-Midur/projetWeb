@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\orderModel;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
-class OrderModelController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
