@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\participantModel;
+use App\Models\Participant;
 use Illuminate\Http\Request;
 
-class ParticipantModelController extends Controller
+class ParticipantController extends Controller
 {
     /**
      * Display a listing of the resource.
