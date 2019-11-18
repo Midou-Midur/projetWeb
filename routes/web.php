@@ -31,25 +31,47 @@ http://localhost/ProjetWebA2/public/
 Route::get('/', function () {
     return view('pages.home');
 })->name('pages.home');
-//login/out/signIn
 
-//dev
-Route::get('/pages/aPropos', 'aProposController');
-Route::get('/pages/boutique', 'boutiqueController');
-Route::get('/pages/pastEvent', 'pastEventController');
-Route::get('/pages/currentEvent', 'currentEventController');
-Route::get('/pages/profil', 'profilController');
 
-////Management et respect des règles
-Route::get('/pages/cgv', 'cgvController');
-Route::get('/pages/contact', 'contactController');
-Route::get('/pages/credit', 'creditController');
-Route::get('/pages/profil', 'profilController');
+//Modération
+
+Route::get('/pages/Management', function(){
+    return view('pages.Management');
+})->name('pages.Management');
+
+//Events
+Route::get('/pages/currentEvent', function(){
+    return view('pages.currentEvent');
+})->name('pages.currentEvent');
+
+Route::get('/pages/boutique', function(){
+    return view('pages.boutique');
+})->name('pages.boutique');
+
+//Juridique
+Route::get('/pages/aPropos', function(){
+    return view('pages.aPropos');
+})->name('pages.aPropos');
+
 Route::get('/pages/legal', function(){
-	return View::make('pages.legal')->compact('pages.legal');
+    return view('pages.legal');
 })->name('pages.legal');
 
-//test
-Route::post('/pages/testArticleForm', function(){
-	return View::make('pages.testArticleForm')->compact('pages.testArticleForm');
-})->name('pages.testArticleForm');
+Route::get('/pages/cgv', function(){
+    return view('pages.cgv');
+})->name('pages.cgv');
+
+Route::get('/pages/carteCampus', function(){
+    return view('pages.carteCampus');
+})->name('pages.carteCampus');
+
+Route::get('/pages/credit', function(){
+    return view('pages.credit');
+})->name('pages.credit');
+
+//Relatif au compte
+
+Route::get('/pages/profil', function(){
+return view('pages.Profil');
+})->name('pages.Profil');
+
