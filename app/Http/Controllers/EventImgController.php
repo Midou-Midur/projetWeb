@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event_img;
 use Illuminate\Http\Request;
 
-class EventImgModelController extends Controller
+class EventImgController extends Controller
 {
     /**
      * Display a listing of the resource.
