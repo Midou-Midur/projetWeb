@@ -14,4 +14,8 @@ class Event extends Model
         return $this->hasMany('App\Models\'Event_img');
     }
     
+    public function participants(){
+        return $this->hasMany('App\Models\Participant');
+    }
+    
 }
