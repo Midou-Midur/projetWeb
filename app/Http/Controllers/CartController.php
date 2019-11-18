@@ -2,29 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\cartsModel;
+use App\Models\Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class CartsModelController extends Controller
+use Auth;
+
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function showCart() //montre le contenu du panier
     {
-        //
-    }
+        if(auth()->check() && Auth::user()->role = 'BDE' || Auth::user()->role = 'Etudiant'){
+            $carts = DB::table('cart')->join('articles', 'cart.article_id', '=', 'articles.id')->get();
+            $total = DB::table('cart')->join('articles', 'articles.id', '=', 'cart.article_id')->sum('articles.article_price');
+            
+            
+            return view('pages.cart', compact('carts', 'total'));
+        }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('pages.login');
     }
 
     /**
@@ -33,11 +34,25 @@ class CartsModelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function addToCart(Request $request) //Ajoute un article au panier
     {
-        //
-    }
+        if (auth()->guest())
+            {
+                return view('pages.login')->with('error', 'Accès refusé');
+                
+            }
+                $cart = new \App\Models\Cart;
 
+                $cart->user_id = request('user_id');
+                $cart->article_id = request('article_id');
+
+                $cart = \App\Models\Cart::create([
+                    'article_id' => request('article_id'),
+                    'user_id' => request('user_id'),  ]);
+        
+                return back();
+    }
+        
     /**
      * Display the specified resource.
      *
