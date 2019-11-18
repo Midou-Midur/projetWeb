@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\event_imgModel;
+use App\Models\Event_img;
 use Illuminate\Http\Request;
 
 class EventImgModelController extends Controller
